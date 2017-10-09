@@ -11,12 +11,12 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    private final ICalculationFunctions mCalculator = new Calculator();
+    private final ICalculator mCalculator = new Calculator();
     private EditText mInputEditText;
     private Button mPlusButton;
     private Button mMinusButton;
     private Button mMultiplyButton;
-    private Button mDevideButton;
+    private Button mDivideButton;
     private TextView mResultTextView;
 
     private float mMemory;
@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         mPlusButton = (Button) findViewById(R.id.plus_button);
         mMinusButton = (Button) findViewById(R.id.minus_button);
         mMultiplyButton = (Button) findViewById(R.id.multiply_button);
-        mDevideButton = (Button) findViewById(R.id.devide_button);
+        mDivideButton = (Button) findViewById(R.id.divide_button);
         mResultTextView = (TextView) findViewById(R.id.result_textView);
         setButtonsAvailability(false);
 
@@ -80,16 +80,14 @@ public class MainActivity extends AppCompatActivity {
                 mOperation = Operation.Multiply;
             }
         });
-        mDevideButton.setOnClickListener(new View.OnClickListener() {
+        mDivideButton.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(final View v) {
                 onClickFucnt();
-                mOperation = Operation.Devide;
+                mOperation = Operation.Divide;
             }
         });
-
-
     }
     private void onClickFucnt() {
         if (mOperation == null) {
@@ -103,7 +101,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void setButtonsAvailability(final boolean value) {
         mPlusButton.setEnabled(value);
-        mDevideButton.setEnabled(value);
+        mDivideButton.setEnabled(value);
         mMultiplyButton.setEnabled(value);
         mMinusButton.setEnabled(value);
     }

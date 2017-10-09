@@ -1,8 +1,8 @@
 package com.swalffy.github.com.calctests;
 
-public enum Operation {
+enum Operation {
     Plus,
     Minus,
     Multiply,
-    Devide
+    Divide
 }

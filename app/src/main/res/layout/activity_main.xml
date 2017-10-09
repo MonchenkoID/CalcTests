@@ -59,7 +59,7 @@
         app:layout_constraintRight_toRightOf="parent"/>
 
     <Button
-        android:id="@+id/devide_button"
+        android:id="@+id/divide_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="devide"
