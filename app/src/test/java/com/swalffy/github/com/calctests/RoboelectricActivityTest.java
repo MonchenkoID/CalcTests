@@ -30,18 +30,18 @@ public class RoboelectricActivityTest {
         controller.create();
         controller.start();
         controller.resume();
-        MainActivity activity = controller.get();
-        View multiplyButton = activity.findViewById(R.id.multiply_button);
-        EditText inputEditText = (EditText)activity.findViewById(R.id.input_editText);
-        TextView resultTextView = (TextView)activity.findViewById(R.id.result_textView);
+        final MainActivity activity = controller.get();
+        final View multiplyButton = activity.findViewById(R.id.multiply_button);
+        final EditText inputEditText = (EditText)activity.findViewById(R.id.input_editText);
+        final TextView resultTextView = (TextView)activity.findViewById(R.id.result_textView);
 
-        assertEquals(multiplyButton.isEnabled(), false);
+        assertEquals(multiplyButton.isEnabled(), false); //Check if button is not enabled
         inputEditText.setText(String.valueOf(1.0f));
-        assertEquals(multiplyButton.isEnabled(), true);
+        assertEquals(multiplyButton.isEnabled(), true); //Check if button is enabled
         multiplyButton.performClick();
         inputEditText.setText(String.valueOf(2.0f));
         multiplyButton.performClick();
-        assertEquals(resultTextView.getText(),"2.00");
+        assertEquals(resultTextView.getText(),"2.00"); //Check multiply result
     }
 
     @After
