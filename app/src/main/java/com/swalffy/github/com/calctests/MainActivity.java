@@ -88,7 +88,7 @@ public class MainActivity extends AppCompatActivity {
                 mOperation = Operation.Divide;
             }
         });
-    }
+    }//TODO check input letters and other symbols
     private void onClickFucnt() {
         if (mOperation == null) {
             mMemory = Float.parseFloat(mInputEditText.getText().toString());
