@@ -11,13 +11,13 @@ class Calculator implements ICalculator {
     public float minus(final float a, final float b) {
         return a - b;
     }
-
+//TODO delete unused value
     @Override
     public float multiply(final float a, final float b) {
         final float c = 0.4f;
         return a * b;
     }
-
+//TODO check division by zero
     @Override
     public float divide(final float a, final float b) {
         return a / b;
